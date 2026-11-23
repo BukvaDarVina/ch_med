@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Государственная больница «Хайлань» — Лечение и косметология в Хэйхэ (Китай)</title>
+  <meta name="description" content="Многопрофильная государственная клиника Хайлань в Хэйхэ. Лечение зубов, традиционная китайская медицина, косметология и реабилитация. В 2-3 раза дешевле клиник России.">
+  <style>
+    :root {
+      --p-accent: oklch(0.55 0.18 245);
+      --p-accent-hover: oklch(0.48 0.18 245);
+      --p-neutral: oklch(0.27 0.01 260);
+      --surface: oklch(0.99 0.002 95);
+      --surface-card: oklch(1 0 0);
+      --surface-2: oklch(0.96 0.008 245);
+      --text: oklch(0.22 0.01 260);
+      --text-muted: oklch(0.46 0.01 260);
+      --border: oklch(0.90 0.01 245);
+      --radius-sm: 8px;
+      --radius: 14px;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--surface); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; border-radius: var(--radius-sm); }
+    a { color: var(--p-accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--p-accent-hover); }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; font-weight: 600; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: all 0.2s ease; text-align: center; }
+    .btn-primary { background: var(--p-accent); color: #fff; }
+    .btn-primary:hover { background: var(--p-accent-hover); color: #fff; }
+    .btn-outline { background: transparent; border: 2px solid var(--p-accent); color: var(--p-accent); }
+    .btn-outline:hover { background: var(--p-accent); color: #fff; }
+
+    /* Header */
+    header.site-header { background: var(--surface-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .header-content { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: var(--text); }
+    .logo span { color: var(--p-accent); font-size: 0.9rem; display: block; font-weight: 500; }
+    nav.nav-links { display: flex; gap: 20px; font-size: 0.95rem; font-weight: 500; }
+    nav.nav-links a { color: var(--text); }
+    nav.nav-links a:hover { color: var(--p-accent); }
+    .header-actions { display: flex; align-items: center; gap: 16px; }
+    .header-contact { text-align: right; font-size: 0.85rem; color: var(--text-muted); }
+    .header-contact strong { color: var(--text); display: block; font-size: 1rem; }
+
+    /* Sections */
+    section { padding: 60px 0; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { font-size: 2rem; margin-bottom: 12px; }
+    .section-title p { color: var(--text-muted); max-width: 65ch; margin: 0 auto; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, oklch(0.97 0.02 245) 0%, var(--surface) 100%); padding: 70px 0 60px; border-bottom: 1px solid var(--border); }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+    .hero-badge { display: inline-block; padding: 6px 14px; background: oklch(0.92 0.04 245); color: var(--p-accent); font-weight: 600; font-size: 0.85rem; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 20px; text-wrap: balance; }
+    .hero p.lead { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 28px; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .stat-item strong { display: block; font-size: 1.6rem; color: var(--p-accent); }
+    .stat-item span { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* Features Grid */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    .card { background: var(--surface-card); padding: 28px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    /* Feature Highlight */
+    .bg-light { background: var(--surface-2); }
+    .feature-box { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .feature-content h3 { font-size: 1.8rem; margin-bottom: 16px; }
+    .feature-list { list-style: none; margin: 20px 0; }
+    .feature-list li { position: relative; padding-left: 28px; margin-bottom: 12px; font-size: 0.98rem; }
+    .feature-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--p-accent); font-weight: bold; }
+
+    /* Departments Tag List */
+    .dept-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .dept-tag { background: var(--surface-2); border: 1px solid var(--border); padding: 8px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+
+    /* Floor Accordion / Scheme */
+    .floors-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+    .floor-list { display: flex; flex-direction: column; gap: 12px; }
+    .floor-item { background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 20px; }
+    .floor-item header { display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--p-accent); margin-bottom: 6px; }
+    .floor-item p { font-size: 0.9rem; color: var(--text); }
+
+    /* Process Steps */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .step-card { background: var(--surface-card); border: 1px solid var(--border); padding: 24px; border-radius: var(--radius); text-align: center; position: relative; }
+    .step-num { width: 40px; height: 40px; background: var(--p-accent); color: #fff; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+
+    /* CTA Form */
+    .cta-section { background: linear-gradient(135deg, oklch(0.30 0.05 245) 0%, oklch(0.20 0.03 260) 100%); color: #fff; }
+    .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .cta-text h2 { font-size: 2.2rem; margin-bottom: 16px; color: #fff; }
+    .cta-text p { color: oklch(0.88 0.01 245); margin-bottom: 24px; }
+    .cta-form { background: #fff; color: var(--text); padding: 32px; border-radius: var(--radius); }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.95rem; }
+    
+    /* Footer */
+    footer { background: var(--text); color: oklch(0.75 0.01 260); padding: 30px 0; font-size: 0.85rem; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .feature-box, .floors-container, .cta-grid, .grid-2, .grid-3, .grid-4, .steps { grid-template-columns: 1fr; }
+      nav.nav-links { display: none; }
+      .hero h1 { font-size: 2rem; }
+      .hero-stats { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap header-content">
+      <div class="logo">
+        Больница «Хайлань»
+        <span>Государственная клиника • Хэйхэ</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">О клинике</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#departments">Отделения</a>
+        <a href="#tcm">ТКМ</a>
+        <a href="#floors">Схема здания</a>
+        <a href="#contact">Запись</a>
+      </nav>
+      <div class="header-actions">
+        <div class="header-contact">
+          <span>Бесплатный звонок из РФ</span>
+          <strong>Консультация на русском</strong>
+        </div>
+        <a href="#contact" class="btn btn-primary">Записаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <span class="hero-badge">Государственная медицина КНР</span>
+          <h1>Лечение и омоложение в Хэйхэ по европейским стандартам</h1>
+          <p class="lead">Стоматология, традиционная китайская медицина, косметология и комплексная реабилитация. Цены в 2–3 раза ниже клиник России при полном соблюдении мировых стандартов.</p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-primary">Бесплатная пульсовая диагностика</a>
+            <a href="#departments" class="btn btn-outline">Наши отделения</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>4 000 м²</strong>
+              <span>6 этажей медоборудования</span>
+            </div>
+            <div class="stat-item">
+              <strong>750 м</strong>
+              <span>От Благовещенска через Амур</span>
+            </div>
+            <div class="stat-item">
+              <strong>В 2–3 раза</strong>
+              <span>Доступнее клиник РФ</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="img/map-750.jpg" alt="Карта расположения клиники Хайлань рядом с Благовещенском">
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section id="advantages" class="wrap">
+      <div class="section-title">
+        <h2>Почему пациенты из России выбирают «Хайлань»</h2>
+        <p>Мы создали максимальный комфорт и прозрачность для российских граждан, приезжающих на диагностику и лечение в Хэйхэ.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card">
+          <h3>📍 Удобный проезд</h3>
+          <p>Больница находится в Хэйхэ. Короткая переправа через Амур от Благовещенска занимает минимум времени для комфортной поездки.</p>
+        </div>
+        <div class="card">
+          <h3>💰 Выгода до 70%</h3>
+          <p>Стоимость стоматологии, косметологии и курсов ТКМ в два-три раза ниже, чем в престижных медицинских центрах России.</p>
+        </div>
+        <div class="card">
+          <h3>🛡 Сертифицированные материалы</h3>
+          <p>Используем только сертифицированные бренды мировой стоматологии (Ivoclar, Vita) и оригинальное лазерное оборудование.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Честный подход</h3>
+          <p>Строго без назначения лишних процедур. Программу лечения врач составляет индивидуально после диагностики.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TCM Feature -->
+    <section id="tcm" class="bg-light">
+      <div class="wrap feature-box">
+        <div class="feature-media">
+          <img src="img/departments-list.jpg" alt="Отделения клиники и Традиционная Китайская Медицина">
+        </div>
+        <div class="feature-content">
+          <span class="hero-badge">Особый профиль</span>
+          <h3>Традиционная Китайская Медицина (ТКМ)</h3>
+          <p>Эффективное восстановление организма без химии по проверенным вековым рецептам на основе натуральных лекарственных трав.</p>
+          <ul class="feature-list">
+            <li><strong>Бесплатная пульсовая диагностика</strong> для каждого пациента</li>
+            <li>Персональная программа восстановления от опытных мастеров ТКМ</li>
+            <li>Лечебный массаж и вакуум-терапия банками</li>
+            <li>Акупунктура (иглоукалывание) и иглонож</li>
+            <li>Эффективное лечение сердечно-сосудистых патологий, инсультов и болей в позвоночнике</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Записаться на пульсовую диагностику</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments -->
+    <section id="departments" class="wrap">
+      <div class="section-title">
+        <h2>Профильные отделения клиники</h2>
+        <p>Полный комплекс медицинских служб в просторном 6-этажном здании</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>🦷 Стоматология</h3>
+          <p>Эстетическая и лечебная стоматология, протезирование, реставрация зубов с применением немецких и европейских материалов (Ivoclar, Vita).</p>
+        </div>
+        <div class="card">
+          <h3>✨ Медицинская косметология</h3>
+          <p>Блефаропластика, эндоскопический лифтинг лба, подтяжка лица и бровей, трансплантация волос, инъекционная и лазерная косметология, татуаж.</p>
+        </div>
+        <div class="card">
+          <h3>🦴 Лечение болей и позвоночника</h3>
+          <p>Специализированная помощь при хронических болях в шее, пояснице, суставах, ревматизме, патологиях шейного и поясничного отделов.</p>
+        </div>
+        <div class="card">
+          <h3>❤️ Сердечно-сосудистый профиль</h3>
+          <p>Терапия хронических болезней сердца, реабилитация после ишемического и геморрагического инсультов.</p>
+        </div>
+        <div class="card">
+          <h3>🔍 Диагностический центр</h3>
+          <p>Кабинеты КТ, рентгенографии, ортопантомографии, УЗИ, ЭКГ, лаборатория и гастроэндоскопия.</p>
+        </div>
+        <div class="card">
+          <h3>🏥 Хирургия и Стационар</h3>
+          <p>Современный операционный блок, отделение анестезиологии, комфортабельный стационар для восстановительного периода.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Building Floor Scheme -->
+    <section id="floors" class="bg-light">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Схема расположения кабинетов (1F – 6F)</h2>
+          <p>Всё необходимое оборудование и специалисты на 4 000 кв. м площади</p>
+        </div>
+        <div class="floors-container">
+          <div class="floor-media">
+            <img src="img/floors.jpg" alt="Схема этажей больницы Хайлань">
+          </div>
+          <div class="floor-list">
+            <div class="floor-item">
+              <header><span>1 ЭТАЖ (1F)</span><span>Приём и Диагностика</span></header>
+              <p>Стоматология, Зал ожидания, Терапевт, Касса, Аптека, ЭКГ, КТ, Рентгенография, Ортопантомография.</p>
+            </div>
+            <div class="floor-item">
+              <header><span>2 ЭТАЖ (2F)</span><span>Специализированный</span></header>
+              <p>Стоматология, Процедурный кабинет, КТ-диагностика камней.</p>
+            </div>
+            <div class="floor-item">
+              <header><span>3 ЭТАЖ (3F)</span><span>Администрация и УЗИ</span></header>
+              <p>Главный офис, Кабинеты УЗИ, Лечебный массаж, Стоматология, Технические службы.</p>
+            </div>
+            <div class="floor-item">
+              <header><span>4 ЭТАЖ (4F)</span><span>Гинекология и Стационар</span></header>
+              <p>Стоматология, Отделение гинекологии, Смотровая, Комфортный стационар для больных.</p>
+            </div>
+            <div class="floor-item">
+              <header><span>5 ЭТАЖ (5F)</span><span>Косметология и ТКМ</span></header>
+              <p>Отделение медицинской косметологии, Иглоукалывание, Кабинеты врачей, Стоматология.</p>
+            </div>
+            <div class="floor-item">
+              <header><span>6 ЭТАЖ (6F)</span><span>Хирургия и Гастроэндоскопия</span></header>
+              <p>Операционный блок, Гастроэнтероскопический кабинет врача, Конференц-зал.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Steps -->
+    <section class="wrap">
+      <div class="section-title">
+        <h2>Как пройти лечение в Хэйхэ</h2>
+        <p>4 простых шага от обращения до идеального результата</p>
+      </div>
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h4>Консультация</h4>
+          <p>Оставьте заявку. Мы свяжемся с вами и ответим на все вопросы на русском языке.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h4>Приезд в Хэйхэ</h4>
+          <p>Удобная переправа из Благовещенска. Помогаем с встречей и ориентированием.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h4>Диагностика</h4>
+          <p>Бесплатная пульсовая диагностика и составление точного плана лечения без лишних услуг.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h4>Лечение</h4>
+          <p>Прохождение процедур у опытных врачей в спокойной и комфортной обстановке.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="cta-section">
+      <div class="wrap cta-grid">
+        <div class="cta-text">
+          <h2>Запишитесь на бесплатную диагностику</h2>
+          <p>Пройдите первичный осмотр и пульсовую диагностику ТКМ бесплатно. Узнайте точную стоимость вашего лечения со скидкой до 70% от цен российских клиник.</p>
+          <ul style="list-style: none; margin-top: 20px; line-height: 2;">
+            <li>✓ Полное сопровождение на русском языке</li>
+            <li>✓ Соблюдение европейских стандартов стерильности</li>
+            <li>✓ Официальная государственная лицензия КНР</li>
+          </ul>
+        </div>
+        <div class="cta-form">
+          <form onsubmit="event.preventDefault(); alert('Спасибо за обращение! Мы свяжемся с вами в ближайшее время.');">
+            <div class="form-group">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон / WhatsApp</label>
+              <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-group">
+              <label for="service">Интересующее направление</label>
+              <select id="service">
+                <option>Стоматология (лечение и протезирование)</option>
+                <option>Традиционная китайская медицина (ТКМ)</option>
+                <option>Медицинская косметология и пластика</option>
+                <option>Лечение позвоночника и суставов</option>
+                <option>Сердечно-сосудистая реабилитация</option>
+                <option>Комплексная диагностика</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Получить консультацию</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-content">
+      <p>© Государственная многопрофильная больница «Хайлань», г. Хэйхэ (КНР). Все права защищены.</p>
+      <p>Проезд из г. Благовещенск (750 м через р. Амур)</p>
+    </div>
+  </footer>
+
+</body>
+</html>
