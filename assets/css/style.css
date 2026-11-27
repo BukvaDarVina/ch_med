@@ -148,6 +148,7 @@ footer { background: var(--text); color: oklch(0.75 0.01 260); padding: 40px 0; 
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 99;
+    padding: 0 20px;
   }
   nav.nav-links.open { transform: translateX(0); }
   nav.nav-links a { padding: 10px 20px; }
