@@ -6,6 +6,9 @@
 *.iws
 *.xml
 
+# AI tool cache
+.gigacode_vsc/
+
 # OS
 .DS_Store
 Thumbs.db
