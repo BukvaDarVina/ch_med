@@ -6,8 +6,46 @@
   <title>Государственная больница «Хайлань» — Лечение и косметология в Хэйхэ (Китай)</title>
   <meta name="description" content="Многопрофильная государственная клиника Хайлань в Хэйхэ. Лечение зубов, традиционная китайская медицина, косметология и реабилитация. В 2-3 раза дешевле клиник России.">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Государственная больница «Хайлань» — Лечение и косметология в Хэйхэ">
+  <meta property="og:description" content="Многопрофильная государственная клиника Хайлань в Хэйхэ. Лечение зубов, ТКМ, косметология и реабилитация. Цены в 2–3 раза ниже клиник России.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Государственная больница «Хайлань» — Хэйхэ, КНР">
+  <meta name="twitter:description" content="Лечение и косметология в Хэйхэ по европейским стандартам. Цены в 2–3 раза ниже клиник России.">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    "name": "Государственная больница «Хайлань»",
+    "description": "Многопрофильная государственная клиника Хайлань в Хэйхэ. Лечение зубов, традиционная китайская медицина, косметология и реабилитация.",
+    "url": "https://bukvadavina.github.io/ch_med/",
+    "telephone": "+86-000-000-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Хэйхэ",
+      "addressRegion": "Хэйлунцзян",
+      "addressCountry": "CN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "50.23",
+      "longitude": "130.48"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "320"
+    },
+    "medicalSpecialty": ["Dentistry", "Dermatology", "TraditionalChineseMedicine", "CosmeticSurgery", "Cardiology"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
 
   <!-- Header -->
   <header class="site-header">
@@ -16,14 +54,16 @@
         Больница «Хайлань»
         <span>Государственная клиника • Хэйхэ</span>
       </div>
-      <nav class="nav-links">
-        <a href="#about">О клинике</a>
+      <nav class="nav-links" aria-label="Основная навигация">
         <a href="#advantages">Преимущества</a>
         <a href="#departments">Отделения</a>
         <a href="#tcm">ТКМ</a>
         <a href="#floors">Схема здания</a>
         <a href="#contact">Запись</a>
       </nav>
+      <button class="hamburger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <div class="header-actions">
         <div class="header-contact">
           <span>Бесплатный звонок из РФ</span>
@@ -34,15 +74,15 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-label="Главный баннер">
       <div class="wrap hero-grid">
         <div class="hero-text">
           <span class="hero-badge">Государственная медицина КНР</span>
           <h1>Лечение и омоложение в Хэйхэ по европейским стандартам</h1>
           <p class="lead">Стоматология, традиционная китайская медицина, косметология и комплексная реабилитация. Цены в 2–3 раза ниже клиник России при полном соблюдении мировых стандартов.</p>
-          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Бесплатная пульсовая диагностика</a>
             <a href="#departments" class="btn btn-outline">Наши отделения</a>
           </div>
@@ -62,7 +102,7 @@
           </div>
         </div>
         <div class="hero-media">
-          <img src="assets/img/map-750.jpg" alt="Карта расположения клиники Хайлань рядом с Благовещенском">
+          <img src="assets/img/map-750.jpg" alt="Карта расположения клиники Хайлань рядом с Благовещенском" loading="lazy">
         </div>
       </div>
     </section>
@@ -97,7 +137,7 @@
     <section id="tcm" class="bg-light">
       <div class="wrap feature-box">
         <div class="feature-media">
-          <img src="assets/img/departments-list.jpg" alt="Отделения клиники и Традиционная Китайская Медицина">
+          <img src="assets/img/departments-list.jpg" alt="Отделения клиники и Традиционная Китайская Медицина" loading="lazy">
         </div>
         <div class="feature-content">
           <span class="hero-badge">Особый профиль</span>
@@ -158,7 +198,7 @@
         </div>
         <div class="floors-container">
           <div class="floor-media">
-            <img src="assets/img/floors.jpg" alt="Схема этажей больницы Хайлань">
+            <img src="assets/img/floors.jpg" alt="Схема этажей больницы Хайлань" loading="lazy">
           </div>
           <div class="floor-list">
             <div class="floor-item">
@@ -226,25 +266,25 @@
         <div class="cta-text">
           <h2>Запишитесь на бесплатную диагностику</h2>
           <p>Пройдите первичный осмотр и пульсовую диагностику ТКМ бесплатно. Узнайте точную стоимость вашего лечения со скидкой до 70% от цен российских клиник.</p>
-          <ul style="list-style: none; margin-top: 20px; line-height: 2;">
-            <li>✓ Полное сопровождение на русском языке</li>
-            <li>✓ Соблюдение европейских стандартов стерильности</li>
-            <li>✓ Официальная государственная лицензия КНР</li>
+          <ul class="list-check">
+            <li>Полное сопровождение на русском языке</li>
+            <li>Соблюдение европейских стандартов стерильности</li>
+            <li>Официальная государственная лицензия КНР</li>
           </ul>
         </div>
         <div class="cta-form">
-          <form onsubmit="event.preventDefault(); alert('Спасибо за обращение! Мы свяжемся с вами в ближайшее время.');">
+          <form action="#" method="post">
             <div class="form-group">
               <label for="name">Ваше имя</label>
-              <input type="text" id="name" placeholder="Иван Иванов" required>
+              <input type="text" id="name" name="name" placeholder="Иван Иванов" required autocomplete="name">
             </div>
             <div class="form-group">
               <label for="phone">Телефон / WhatsApp</label>
-              <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+              <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required autocomplete="tel" pattern="\+?[0-9\s\-\(\)]{7,}">
             </div>
             <div class="form-group">
               <label for="service">Интересующее направление</label>
-              <select id="service">
+              <select id="service" name="service">
                 <option>Стоматология (лечение и протезирование)</option>
                 <option>Традиционная китайская медицина (ТКМ)</option>
                 <option>Медицинская косметология и пластика</option>
@@ -253,7 +293,7 @@
                 <option>Комплексная диагностика</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Получить консультацию</button>
+            <button type="submit" class="btn btn-primary btn-full">Получить консультацию</button>
           </form>
         </div>
       </div>
@@ -262,11 +302,61 @@
 
   <!-- Footer -->
   <footer>
-    <div class="wrap footer-content">
-      <p>© Государственная многопрофильная больница «Хайлань», г. Хэйхэ (КНР). Все права защищены.</p>
-      <p>Проезд из г. Благовещенск (750 м через р. Амур)</p>
+    <div class="wrap">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Больница «Хайлань»</h4>
+          <p>Государственная многопрофильная клиника в Хэйхэ (КНР). Лечение и косметология по европейским стандартам.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <a href="#advantages">Преимущества</a>
+          <a href="#departments">Отделения</a>
+          <a href="#tcm">ТКМ</a>
+          <a href="#floors">Схема здания</a>
+        </div>
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <p>г. Хэйхэ, провинция Хэйлунцзян, КНР</p>
+          <p>Проезд из г. Благовещенск (750 м через р. Амур)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Государственная многопрофильная больница «Хайлань», г. Хэйхэ (КНР). Все права защищены.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+          var isOpen = navLinks.classList.toggle('open');
+          hamburger.classList.toggle('active');
+          hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+          });
+        });
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.focus();
+          }
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>

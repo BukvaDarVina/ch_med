@@ -1,0 +1,33 @@
+# IDE
+.idea/
+.gigaide/
+*.iml
+*.ipr
+*.iws
+*.xml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary / duplicate assets
+app/
+photo_*.jpg
+photo_*_*
+*(*).jpg
+document_*.mp4
+transcrib.txt
+
+# Large assets (consider CDN or external hosting)
+*.mp4
+
+# Build / cache (if added later)
+node_modules/
+dist/
+.build/
+*.local
+
+# Environment / secrets
+.env
+.env.local

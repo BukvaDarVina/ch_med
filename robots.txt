@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bukvadavina.github.io/ch_med/sitemap.xml
